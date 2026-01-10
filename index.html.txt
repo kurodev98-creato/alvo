@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Quer casar comigo? 💍</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #fce4ec;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            transition: background-color 1.5s ease;
+        }
+
+        #conteudo-principal { text-align: center; z-index: 10; }
+
+        h1 {
+            color: #d81b60;
+            font-size: clamp(2rem, 10vw, 3.5rem);
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .btn-container { display: flex; justify-content: center; gap: 20px; }
+
+        button {
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        #btn-sim { background-color: #4caf50; color: white; }
+        #btn-nao { background-color: #f44336; color: white; position: relative; transition: all 0.2s ease; }
+
+        #mensagem-sucesso {
+            display: none;
+            max-width: 800px;
+            width: 90%;
+            margin: 20px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: aparecer 1.5s ease;
+            max-height: 85vh;
+            overflow-y: auto;
+            z-index: 20;
+            position: relative;
+        }
+
+        .texto-carta {
+            color: #444;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: justify;
+            white-space: pre-line;
+        }
+
+        .titulo-sucesso {
+            color: #d81b60;
+            font-size: clamp(2rem, 8vw, 3rem);
+            margin-bottom: 20px;
+            text-align: center;
+            animation: pulsar 2s infinite;
+        }
+
+        /* Animação de Coração Flutuante */
+        .coracao {
+            position: fixed;
+            color: #ff4081;
+            font-size: 20px;
+            user-select: none;
+            pointer-events: none;
+            z-index: 5;
+            animation: subir linear forwards;
+        }
+
+        @keyframes subir {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            10% { opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulsar {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .hidden { display: none !important; }
+        #mensagem-sucesso::-webkit-scrollbar { width: 8px; }
+        #mensagem-sucesso::-webkit-scrollbar-thumb { background: #f06292; border-radius: 10px; }
+        #musica-container { position: absolute; width: 0; height: 0; border: none; visibility: hidden; }
+    </style>
+</head>
+<body>
+
+    <div id="player-musica"></div>
+
+    <div id="conteudo-principal">
+        <h1>Quer casar comigo? 💍</h1>
+        <div class="btn-container">
+            <button id="btn-sim">Sim!</button>
+            <button id="btn-nao">Não</button>
+        </div>
+    </div>
+
+    <div id="mensagem-sucesso">
+        <h1 class="titulo-sucesso">EU TE AMO! ❤️</h1>
+        <div class="texto-carta">
+            Desde o momento em que nossos caminhos se cruzaram, vida, o mundo mudou. Não foi uma mudança brusca, mas um ajuste de foco. De repente, as cores ficaram mais vivas e o silêncio menos solitário. Comecei a ver você em cada detalhe do meu dia. No café da manhã, no reflexo da janela, na letra de uma música. Percebi que o amor não é um evento, mas um processo. E eu me apaixono por você, vida, em cada etapa desse processo. Gosto de como você sorri sem perceber que está sendo observada. Gosto da sua voz logo que acorda, ainda meio rouca e perdida. Gosto da segurança que sinto só de segurar a sua mão.
+
+            O que temos é raro, eu sei disso. Não é apenas atração física ou afinidade de gostos. É uma conexão de almas que parecem se conhecer de outros tempos. Com você, eu não preciso de máscaras ou armaduras. Posso ser eu mesmo, com todas as minhas falhas e medos. Você me aceita por inteiro, vida, e isso é o maior presente que já recebi. Você é o meu porto seguro em dias de tempestade. O lugar para onde eu sempre quero voltar ao final do dia. Estar com você é como chegar em casa depois de uma longa viagem. É o alívio de saber que, aconteça o que acontecer, não estou só.
+
+            Eu amo o jeito que você, vida, franze a testa quando está concentrada. Amo a sua risada, que é o som mais bonito que já ouvi. Amo o brilho nos seus olhos quando você fala de algo que ama. Amo como você consegue me acalmar sem dizer uma única palavra. Amo o cheiro do seu perfume que insiste em ficar na minha roupa. Amo os nossos planos, desde os mais simples até os mais ambiciosos. Amo as nossas conversas de madrugada sobre o sentido da vida. E amo as nossas piadas internas que ninguém mais entende. Cada detalhe seu compõe a melodia perfeita da minha existência. Você é a poesia que eu nunca soube escrever, mas que sempre quis ler.
+
+            Você me ensinou, vida, que amar é um exercício diário de paciência. Aprendi que a felicidade não está no destino, mas no trajeto. Com você, descobri que a vulnerabilidade é uma forma de força. Aprendi a ouvir não apenas as suas palavras, mas os seus silêncios. Você me mostrou que o amor é generoso e não impõe condições. Aprendi a ser uma pessoa melhor para estar à sua altura. Você desperta em mim o desejo de evoluir constantemente. Não para te impressionar, mas para retribuir tudo o que você me dá. Você é o espelho onde vejo a minha melhor versão refletida. Obrigado por acreditar em mim quando nem eu mesmo acreditava.
+
+            A vida nem sempre é fácil, nós dois sabemos disso. Haverá dias nublados e obstáculos pelo caminho. Mas com você ao meu lado, sinto que posso enfrentar qualquer coisa. Sua coragem me inspira a não desistir dos meus sonhos. Sua resiliência é o que me mantém de pé nos momentos difíceis. Somos uma equipe, um time imbatível contra as adversidades. Eu prometo estar lá por você, na saúde e na doença. Na alegria e na tristeza, no sucesso e no fracasso. Minha mão estará sempre estendida para te segurar. Meus braços serão sempre o seu refúgio quando o mundo for cruel.
+
+            Prometo te ouvir com o coração, vida, mesmo quando não concordarmos. Prometo cultivar a nossa amizade tanto quanto o nosso romance. Prometo nunca esquecer do que nos trouxe até aqui. Prometo te surpreender com pequenos gestos de carinho. Prometo respeitar o seu espaço e a sua individualidade. Prometo ser o seu maior fã e incentivador. Prometo cuidar de nós dois com todo o zelo do mundo. Prometo que o meu amor por você não é estático, ele cresce. Ele se transforma e se fortalece a cada novo desafio superado. Eu prometo te escolher, todos os dias, vida, para o resto da jornada.
+
+            Estar com você é descobrir um novo universo a cada dia. Gosto de como o nosso ritmo se encaixa perfeitamente. No encaixe do abraço, onde o mundo lá fora deixa de existir. No toque suave que diz mais do que mil enciclopédias. Adoro o som da sua respiração, vida, quando você pega no sono. É o som da paz, a prova de que estou exatamente onde deveria estar. Você tem o dom de transformar um dia comum em uma memória inesquecível. Um jantar simples vira um banquete se tenho a sua companhia. Uma caminhada sem rumo vira uma aventura ao seu lado. Não preciso de luxo, preciso apenas da sua presença.
+
+            Você é a pessoa que eu procuro na multidão, sempre. É para você que eu quero contar a primeira boa notícia do dia. E é no seu ombro que eu quero chorar as minhas frustrações. Você entende o que eu sinto apenas pelo meu olhar, vida. Essa sintonia não se compra, se constrói com entrega. E eu me entreguei a você desde o primeiro segundo. Sem medo, sem reservas, com o coração aberto. Amar você é a decisão mais fácil que eu já tomei. É um instinto, como respirar ou ver o sol nascer. Você é o meu pensamento favorito, o meu sonho acordado.
+
+            Eu vejo o nosso futuro, vida, como um livro cheio de páginas em branco. E mal posso esperar para escrever cada capítulo com você. Imagino a nossa casa, com o nosso jeito e os nossos cheiros. Imagino as viagens que ainda faremos, os lugares que conheceremos. Quero ver o mundo através dos seus olhos, que brilham tanto. Quero envelhecer ao seu lado e ver as marcas do tempo em nós. Cada ruga será o testemunho de uma risada compartilhada. Cada fio de cabelo branco será a prova de uma fase vencida. Quero segurar a sua mão quando tivermos oitenta anos. E olhar para você, vida, com o mesmo fogo que sinto hoje.
+
+            Porque a beleza que eu vejo em você é eterna, vem de dentro. É a beleza da sua alma, da sua bondade e da sua luz. Quero construir uma vida da qual nos orgulharemos no final. Onde o amor foi o alicerce e o respeito foi a parede. Onde nunca faltou apoio, compreensão e parceria. Você é o projeto mais bonito da minha vida. O meu investimento emocional mais seguro e feliz. Com você, vida, o futuro não me causa medo, me causa entusiasmo. Mal posso esperar pelo café da manhã de amãnhã. E por todos os "amanhãs" que virão depois desse.
+
+            Obrigado por ter aparecido na minha vida no momento certo. Obrigado por não ter desistido de mim nos meus dias ruins, vida. Obrigado por ser essa pessoa tão incrível e autêntica. Você não sabe o quanto a sua existência melhora o mundo. Especialmente o meu mundo, que era tão pequeno antes de você. Você expandiu meus horizontes e me fez acreditar no impossível. Sua generosidade me ensina a ser menos egoísta. Sua calma me ensina a domar a minha ansiedade. Você é o equilíbrio que eu sempre busquei sem saber.
+
+            Sou grato por cada mensagem, cada ligação e cada carinho. Sou grato por cada "eu te amo" sussurrado ou gritado. Sou grato pela confiança que você deposita em mim, vida. Prometo honrar essa confiança todos os dias da minha vida. Você é a minha joia rara, o meu tesouro mais precioso. Protegerei o que temos com todas as minhas forças. Porque o que temos é sagrado, é puro e é verdadeiro. Não há nada no universo que se compare ao que sinto. É uma força que me move, um combustível que me incendeia. Você é a razão do meu sorriso mais sincero. Você é, vida, e sempre será, o grande amor da minha vida.
+
+            Se eu pudesse parar o tempo, pararia num instante com você. Naquele momento exato em que o resto do mundo desaparece. Onde só existe a sua pele na minha e o silêncio cúmplice. Mas o tempo corre, e isso também é bom, pois nos permite crescer. Gosto de ver como mudamos e como o nosso amor se adapta. Ele não é mais aquela paixão adolescente, urgente e cega. Ele é agora um amor maduro, consciente e profundo. Um amor que sabe perdoar e que sabe pedir perdão. Um amor que entende que ninguém é perfeito, mas que somos perfeitos um para o outro, vida.
+
+            Você preenche os espaços vazios que eu nem sabia que existiam. Você é a peça do quebra-cabeça que faz tudo fazer sentido. Sem você, a vida seria apenas uma sucessão de dias cinzas. Com você, é um festival de cores, sons e sensações. Eu amo a forma como você me desafia a pensar diferente. Como você me tira da zona de conforto e me faz voar, vida. Você é as minhas asas e, ao mesmo tempo, o meu chão. É a minha âncora e a minha vela ao vento. Como pode uma única pessoa ser tanta coisa ao mesmo tempo? Esse é o mistério da sua alma, que eu amo desvendar.
+
+            Muita gente acha que o amor é um sentimento que apenas acontece. Eu acredito que o amor é uma escolha que renovamos a cada manhã. E eu escolho você, vida, hoje, amãnhã e em todos os dias que me restam. Escolho o seu mau humor matinal e a sua alegria contagiante. Escolho as suas manias e os seus costumes mais estranhos. Escolho as discussões bobas que terminam em beijos demorados. Escolho os silêncios confortáveis no sofá de casa. Escolho as aventuras e a rotina, o tédio e a euforia. Porque não há um "eu" sem você, nós nos tornamos um só.
+
+            Uma unidade feita de duas pessoas livres que decidem estar juntas. E essa liberdade é o que torna tudo mais bonito, vida. Você não está comigo por necessidade, mas por vontade. E eu estou com você porque você é a melhor parte de mim. Se eu tivesse que viver mil vidas, em todas elas te buscaria. Cruzaria oceanos e escalaria montanhas só para te encontrar. Porque o meu coração reconhece o seu de longe. É um imã, uma força da natureza que não se pode evitar. E eu não quero evitar, eu quero mergulhar de cabeça. Quero me afogar nesse sentimento e renascer em você. Você é o meu mundo, vida, o meu tudo.
+
+            Dizem que nada dura para sempre, mas eles não nos conhecem. O nosso amor tem uma qualidade de eternidade. Ele transcende o tempo físico e se instala no plano do espírito. Mesmo quando não estivermos mais aqui, o nosso amor ecoará. Ele deixará rastros de luz por onde passamos. Será a história contada pelos nossos filhos e netos. O exemplo de que o amor verdadeiro ainda existe. Em um mundo tão descartável, nós somos resistência, vida. Somos o "para sempre" em um mar de "agoras". E eu me orgulho tanto do que estamos construindo. Cada tijolo é uma conversa, cada telha é um carinho.
+
+            Nosso castelo é forte porque foi feito com verdade. Não há segredos, não há mentiras, apenas nós dois. A transparência do seu olhar me traz uma paz infinita. Sinto que posso descansar em você, vida, sem medo de cair. Você é a minha cura para as feridas do passado. O curativo para as decepções que a vida me impôs. Com você, o passado é apenas uma lição, não um fardo. O presente é uma dádiva e o futuro uma promessa. Eu te amo além das palavras, além dos gestos, além de mim.
+
+            Chegando aqui, percebo que estas palavras ainda são pouco. Pouco para descrever a imensidão do que sinto no peito por você, vida. Pouco para detalhar cada sonho que tenho ao seu lado. Mas estas linhas servem como um lembrete, um mapa. Para que, nos dias difíceis, você possa ler e lembrar: você é amada com uma intensidade absurda. Você é a prioridade absoluta da minha existência. Sua felicidade é a minha missão diária. Seu bem-estar é o meu objetivo constante. Nunca se esqueça da força que você tem, vida.
+
+            E nunca duvide do meu apoio incondicional. Estarei aqui para celebrar suas vitórias como se fossem minhas. E para dividir o peso das suas derrotas até que fiquem leves. Somos um, somos nós, somos o amor em movimento. Obrigado por ser minha parceira, amiga e cúmplice. Obrigado por me deixar fazer parte da sua história, vida. Que os próximos anos sejam ainda mais incríveis que os primeiros. Que a nossa chama nunca se apague, mas que se transforme em sol. Eu te amo hoje, amanhã, depois e por toda a eternidade. Com todo o meu ser, para sempre, seu.
+        </div>
+    </div>
+
+    <script>
+        const btnNao = document.getElementById('btn-nao');
+        const btnSim = document.getElementById('btn-sim');
+        const conteudoPrincipal = document.getElementById('conteudo-principal');
+        const mensagemSucesso = document.getElementById('mensagem-sucesso');
+        const playerMusica = document.getElementById('player-musica');
+
+        function fugir() {
+            btnNao.style.position = "absolute";
+            const larguraJanela = window.innerWidth - btnNao.offsetWidth - 30;
+            const alturaJanela = window.innerHeight - btnNao.offsetHeight - 30;
+            const aleatorioX = Math.max(15, Math.floor(Math.random() * larguraJanela));
+            const aleatorioY = Math.max(15, Math.floor(Math.random() * alturaJanela));
+            btnNao.style.left = aleatorioX + "px";
+            btnNao.style.top = aleatorioY + "px";
+        }
+
+        btnNao.addEventListener('mouseover', fugir);
+        btnNao.addEventListener('touchstart', (e) => { e.preventDefault(); fugir(); });
+
+        function criarCoracao() {
+            const coracao = document.createElement('div');
+            coracao.classList.add('coracao');
+            coracao.innerHTML = '❤️';
+            coracao.style.left = Math.random() * 100 + 'vw';
+            coracao.style.animationDuration = Math.random() * 3 + 2 + 's';
+            coracao.style.opacity = Math.random();
+            coracao.style.fontSize = Math.random() * 20 + 10 + 'px';
+            
+            document.body.appendChild(coracao);
+            
+            setTimeout(() => {
+                coracao.remove();
+            }, 5000);
+        }
+
+        btnSim.addEventListener('click', () => {
+            conteudoPrincipal.classList.add('hidden');
+            mensagemSucesso.style.display = "block";
+            document.body.style.backgroundColor = "#f8bbd0";
+            document.body.style.overflow = "auto";
+
+            // Inicia a música
+            playerMusica.innerHTML = `<iframe id="musica-container" src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=0" allow="autoplay"></iframe>`;
+
+            // Chuva de corações contínua
+            setInterval(criarCoracao, 150);
+        });
+    </script>
+</body>
+</html>
