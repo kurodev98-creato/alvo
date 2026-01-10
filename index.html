@@ -76,7 +76,6 @@
             animation: pulsar 2s infinite;
         }
 
-        /* Animação de Coração Flutuante */
         .coracao {
             position: fixed;
             color: #ff4081;
@@ -143,7 +142,7 @@
 
             Eu vejo o nosso futuro, vida, como um livro cheio de páginas em branco. E mal posso esperar para escrever cada capítulo com você. Imagino a nossa casa, com o nosso jeito e os nossos cheiros. Imagino as viagens que ainda faremos, os lugares que conheceremos. Quero ver o mundo através dos seus olhos, que brilham tanto. Quero envelhecer ao seu lado e ver as marcas do tempo em nós. Cada ruga será o testemunho de uma risada compartilhada. Cada fio de cabelo branco será a prova de uma fase vencida. Quero segurar a sua mão quando tivermos oitenta anos. E olhar para você, vida, com o mesmo fogo que sinto hoje.
 
-            Porque a beleza que eu vejo em você é eterna, vem de dentro. É a beleza da sua alma, da sua bondade e da sua luz. Quero construir uma vida da qual nos orgulharemos no final. Onde o amor foi o alicerce e o respeito foi a parede. Onde nunca faltou apoio, compreensão e parceria. Você é o projeto mais bonito da minha vida. O meu investimento emocional mais seguro e feliz. Com você, vida, o futuro não me causa medo, me causa entusiasmo. Mal posso esperar pelo café da manhã de amãnhã. E por todos os "amanhãs" que virão depois desse.
+            Porque a beleza que eu vejo em você é eterna, vem de dentro. É a beleza da sua alma, da sua bondade e da sua luz. Quero construir uma vida da qual nos orgulharemos no final. Onde o amor foi o alicerce e o respeito foi a parede. Onde nunca faltou apoio, compreensão e parceria. Você é o projeto mais bonito da minha vida. O meu investimento emocional mais seguro e feliz. Com você, vida, o futuro não me causa medo, me causa entusiasmo. Mal posso esperar pelo café da manhã de amanhã. E por todos os "amanhãs" que virão depois desse.
 
             Obrigado por ter aparecido na minha vida no momento certo. Obrigado por não ter desistido de mim nos meus dias ruins, vida. Obrigado por ser essa pessoa tão incrível e autêntica. Você não sabe o quanto a sua existência melhora o mundo. Especialmente o meu mundo, que era tão pequeno antes de você. Você expandiu meus horizontes e me fez acreditar no impossível. Sua generosidade me ensina a ser menos egoísta. Sua calma me ensina a domar a minha ansiedade. Você é o equilíbrio que eu sempre busquei sem saber.
 
@@ -153,7 +152,7 @@
 
             Você preenche os espaços vazios que eu nem sabia que existiam. Você é a peça do quebra-cabeça que faz tudo fazer sentido. Sem você, a vida seria apenas uma sucessão de dias cinzas. Com você, é um festival de cores, sons e sensações. Eu amo a forma como você me desafia a pensar diferente. Como você me tira da zona de conforto e me faz voar, vida. Você é as minhas asas e, ao mesmo tempo, o meu chão. É a minha âncora e a minha vela ao vento. Como pode uma única pessoa ser tanta coisa ao mesmo tempo? Esse é o mistério da sua alma, que eu amo desvendar.
 
-            Muita gente acha que o amor é um sentimento que apenas acontece. Eu acredito que o amor é uma escolha que renovamos a cada manhã. E eu escolho você, vida, hoje, amãnhã e em todos os dias que me restam. Escolho o seu mau humor matinal e a sua alegria contagiante. Escolho as suas manias e os seus costumes mais estranhos. Escolho as discussões bobas que terminam em beijos demorados. Escolho os silêncios confortáveis no sofá de casa. Escolho as aventuras e a rotina, o tédio e a euforia. Porque não há um "eu" sem você, nós nos tornamos um só.
+            Muita gente acha que o amor é um sentimento que apenas acontece. Eu acredito que o amor é uma escolha que renovamos a cada manhã. E eu escolho você, vida, hoje, amanhã e em todos os dias que me restam. Escolho o seu mau humor matinal e a sua alegria contagiante. Escolho as suas manias e os seus costumes mais estranhos. Escolho as discussões bobas que terminam em beijos demorados. Escolho os silêncios confortáveis no sofá de casa. Escolho as aventuras e a rotina, o tédio e a euforia. Porque não há um "eu" sem você, nós nos tornamos um só.
 
             Uma unidade feita de duas pessoas livres que decidem estar juntas. E essa liberdade é o que torna tudo mais bonito, vida. Você não está comigo por necessidade, mas por vontade. E eu estou com você porque você é a melhor parte de mim. Se eu tivesse que viver mil vidas, em todas elas te buscaria. Cruzaria oceanos e escalaria montanhas só para te encontrar. Porque o meu coração reconhece o seu de longe. É um imã, uma força da natureza que não se pode evitar. E eu não quero evitar, eu quero mergulhar de cabeça. Quero me afogar nesse sentimento e renascer em você. Você é o meu mundo, vida, o meu tudo.
 
@@ -195,12 +194,8 @@
             coracao.style.animationDuration = Math.random() * 3 + 2 + 's';
             coracao.style.opacity = Math.random();
             coracao.style.fontSize = Math.random() * 20 + 10 + 'px';
-            
             document.body.appendChild(coracao);
-            
-            setTimeout(() => {
-                coracao.remove();
-            }, 5000);
+            setTimeout(() => { coracao.remove(); }, 5000);
         }
 
         btnSim.addEventListener('click', () => {
@@ -209,10 +204,10 @@
             document.body.style.backgroundColor = "#f8bbd0";
             document.body.style.overflow = "auto";
 
-            // Inicia a música
+            // Inicia a música (Player do YouTube)
             playerMusica.innerHTML = `<iframe id="musica-container" src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=0" allow="autoplay"></iframe>`;
 
-            // Chuva de corações contínua
+            // Inicia corações flutuantes
             setInterval(criarCoracao, 150);
         });
     </script>
